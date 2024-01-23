@@ -1,0 +1,24 @@
+<div>
+    <h3>Anada su producto aqui</h3>
+    <br>
+    <input type="text" id="nameInput" placeholder="Anadir producto">
+    <input type="number" id="priceInput" placeholder="Anadir precio">
+    <input type="number" id="stockInput" placeholder="Anadir stock">
+
+    <button id="sendProductButton">Enviar</button>
+</div>
+
+
+<div id="productContainer">
+    {{#each productos}}
+    <div>
+        <h1>Producto: {{name}}</h1>
+        <h1>Precio: </h1>
+        <h1>Stock: </h1>
+        <button class="boton" data-id="{{id}}">Eliminar producto</button>
+    </div>
+    {{/each}}
+</div>
+
+<script src=" /socket.io/socket.io.js"></script>
+<script src="/js/socket.js"></script>
